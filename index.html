@@ -1,43 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>WeatherPy</title>
-</head>
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latitude vs. X</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- <style type="text/css">
+	.navbar{
+		margin-top: 20px;
+	}
+</style> -->
+</head> 
 <body>
-  <section>
-    <h1>WeatherPy</h1>
-    <article>
-    <a target="_blank" href="assets/images/cloudymap.png">
-      <img src="assets/images/cloudymap.png" alt="Cloudy Map">
-    </a>
-    <p><em>Cloudy Map</em></p>
-    </article>
-    <hr>
-    <article>
-    <a target="_blank" href="assets/images/humiditymap.png">
-    <img src="assets/images/humiditymap.png" alt="Humidity Map">
-    </a>
-    <p><em>Humidity Map</em></p>
-    </article>
-    <hr>
-    <article>
-      <a href="assets/images/temperaturemap.png">
-      <img target="_blank" src="assets/images/temperaturemap.png" alt="Tempurature Map">
-      </a>
-      <p><em>Temperature Map</em></p>
-    </article>
-    <hr>
-    <!-- an example using figure/ficaption -->
-    <figure>
-      <a target="_blank" href="assets/images/windmap.png">
-      <img src="assets/images/windmap.png" alt="Wind Map">
-      </a>
-      <figcaption><em>Wind Map</em></figcaption>
-    </figure>
-  </section>
-</body>
+<div class="container">
+    <nav class="navbar navbar-inverse">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Latitude</a>
+        </div>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="data.html">Data</a></li>
+                <li><a href="comparison.html">Comparison</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Plots <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="max_temp.html">Max Temperature</a></li>
+                        <li><a href="humidity.html">Humidity</a></li>
+                        <li><a href="cloudiness.html">Cloudiness</a></li>
+                        <li><a href="wind_speed.html">Wind Speed</a></li>
+                        <li class="divider"></li>
+                        <li><a href="comparison.html">Comparison</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <h2 class="text">Summary: Lattitude vs X</h2>
+    <br>
+    <p> The purpose of this project is to identify the different climate behaivors experienced when the location is 
+        closed to the EQUATOR. The data set is retriebed from a WebSite called OpenWeatherMap via API. There are at least
+        500 different locations being pulled to get a significant statistical sample.</p>
+    <p> After getting the data via Pandas for Python, MatPlotLib tool was used to create a graphical 
+        representation (Plot) like the one below.</p>
+    <img width="400" src="Resources/assets/images/Fig1.png" alt="Sample">
+</div>
 
+<div class="container">
+        <h3 class="text-center">Visualizations</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="Resources/assets/images/Fig1.png" alt="Max_Temp">
+              <div class="Latitude vs. Max. Temperature">
+                <h4>Lattitude vs, Max.Temperature</h4>
+                <p>On this chart, you can find the comparison between the Lattitude and the Maximum Temp. based on the data set</p>
+                <p><a href="max_temp.html" class="btn btn-primary" role="button">Details</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="Resources/assets/images/Fig2.png" alt="Humidity">
+              <div class="caption">
+                <h4>Lattitude vs. Humidity</h4>
+                <p>On this chart, you can find the comparison between the Lattitude and Humidity based on the data set</p>
+                <p><a href="humidity.html" class="btn btn-primary" role="button">Details</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="Resources/assets/images/Fig3.png" alt="Cloudiness">
+              <div class="caption">
+                <h4>Lattitude vs. Cloudiness</h4>
+                <p>On this chart, you can find the comparison between the Lattitude and Cloudiness based on the data set</p>
+                <p><a href="cloudiness.html" class="btn btn-primary" role="button">Details</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="Resources/assets/images/Fig4.png" alt="WindSpeed">
+            <div class="caption">
+              <h4>Lattitude vs. WindSpeed</h4>
+              <p>On this chart, you can find the comparison between the Lattitude and Wind Speed based on the data set</p>
+              <p><a href="wind_speed.html" class="btn btn-primary" role="button">Details</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
 </html>
